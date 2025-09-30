@@ -1,0 +1,14 @@
+body {
+    font-size: 15pt;
+    background: linear-gradient(#000000,#00021E,#030411);
+}
+*{
+    margin: 0;
+    
+    
+}
+p{
+    color: #0069FF;
+    font-family: monospace;
+    text-align: center;
+}
