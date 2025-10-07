@@ -308,7 +308,12 @@ function update()
 document.addEventListener('touchstart',function(){
   if(!game.scale.isFullscreen){
     game.scale.startFullscreen()
+    if(screen.orientation && screen.orientation.lock){
+      screen.orientation.lock('landscape').catch(err => {
+        console.warn('Orientation lock failed:', err);
+      });
+    }
   }
   
-})
+},{once: true})
 
