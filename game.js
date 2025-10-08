@@ -64,8 +64,9 @@ function create()
     loop: true,
     volume: 1
   })
-  gameAudio.play()
-  
+  if (!gameAudio.isPlaying){
+    gameAudio.play()
+  }
   collectStarAudio= this.sound.add('collectStarAudio',{loop: false, volume: 0.7})
   gameOverAudio= this.sound.add('gameOverAudio',{loop: false, volume: 1})
   jumpAudio= this.sound.add('jumpAudio',{loop: false,volume: 0.8})
