@@ -59,12 +59,12 @@ function create()
 {
   let sky= this.add.sprite(400,300,'sky')
   sky.setScrollFactor(0)
+  if(!gameAudio){
+    gameAudio= this.sound.add('gameAudio',{
+      loop: true,
+      volume: 1
+    })
   
-  gameAudio= this.sound.add('gameAudio',{
-    loop: true,
-    volume: 1
-  })
-  if (!gameAudio.isPlaying){
     gameAudio.play()
   }
   collectStarAudio= this.sound.add('collectStarAudio',{loop: false, volume: 0.7})
